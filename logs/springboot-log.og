@@ -206,3 +206,9 @@
 2018-03-21 18:56:44.559 DEBUG 8796 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
 2018-03-21 18:56:44.574 DEBUG 8796 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8084 (http)
 2018-03-21 18:56:44.574 DEBUG 8796 --- [restartedMain] com.sd.config.AppConfig                  : Started AppConfig in 0.656 seconds (JVM running for 1119.902)
+2018-03-21 19:06:29.562 DEBUG 8796 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-21 19:06:29.563 DEBUG 8796 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-21 19:06:29.565 DEBUG 8796 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 2 ms
+2018-03-22 09:31:38.419 DEBUG 8796 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-03-22 09:31:39.052 DEBUG 8796 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ca833a6: startup date [Wed Mar 21 18:56:44 IST 2018]; root of context hierarchy
+2018-03-22 09:31:41.639 DEBUG 8796 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown

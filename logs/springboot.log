@@ -1,0 +1,70 @@
+2018-05-03 12:41:50.803 INFO 18608 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-03 12:41:50.803 INFO 18608 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-03 12:41:50.806 INFO 18608 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 3 ms
+2018-05-03 12:45:30.317 INFO 18608 --- [Thread-10] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3a225539: startup date [Thu May 03 12:41:23 IST 2018]; root of context hierarchy
+2018-05-03 12:45:30.319 INFO 18608 --- [Thread-10] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-03 12:45:30.320 INFO 18608 --- [Thread-10] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-03 12:45:30.321 INFO 18608 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-03 12:45:30.323 INFO 18608 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2018-05-03 12:45:30.324 INFO 18608 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2018-05-03 12:45:30.606 INFO 18608 --- [restartedMain] com.sd.config.AppConfig                  : Starting AppConfig on DIN80001575 with PID 18608 (D:\Workspace\sd-app\target\classes started by sreesdas in D:\Workspace\sd-app)
+2018-05-03 12:45:30.607 INFO 18608 --- [restartedMain] com.sd.config.AppConfig                  : No active profile set, falling back to default profiles: default
+2018-05-03 12:45:30.609 INFO 18608 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@19d4642c: startup date [Thu May 03 12:45:30 IST 2018]; root of context hierarchy
+2018-05-03 12:45:31.247 INFO 18608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8b08b10e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-03 12:45:31.515 INFO 18608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2018-05-03 12:45:31.516 INFO 18608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-03 12:45:31.516 INFO 18608 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-03 12:45:31.726 INFO 18608 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-05-03 12:45:31.729 INFO 18608 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-03 12:45:31.730 INFO 18608 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1121 ms
+2018-05-03 12:45:31.760 INFO 18608 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-03 12:45:31.761 INFO 18608 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-03 12:45:31.761 INFO 18608 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-03 12:45:31.761 INFO 18608 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-03 12:45:31.761 INFO 18608 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-05-03 12:45:31.761 INFO 18608 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-03 12:45:31.798 INFO 18608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2018-05-03 12:45:31.798 INFO 18608 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=org.hsqldb.jdbcDriver was not found, trying direct instantiation.
+2018-05-03 12:45:31.813 INFO 18608 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-05-03 12:45:31.813 INFO 18608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2018-05-03 12:45:31.817 INFO 18608 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-03 12:45:31.817 INFO 18608 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-03 12:45:31.828 INFO 18608 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-05-03 12:45:31.840 INFO 18608 --- [restartedMain] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1ef2dee9'
+2018-05-03 12:45:31.840 INFO 18608 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-03 12:45:31.944 INFO 18608 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-03 12:45:31.953 INFO 18608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/helloworld]}" onto public org.springframework.web.servlet.ModelAndView com.sd.controller.HelloContoller.hello()
+2018-05-03 12:45:31.954 INFO 18608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/swagger/hi],methods=[GET],produces=[application/json]}" onto public com.sd.model.Person com.sd.controller.SwaggerController.hiSwagger()
+2018-05-03 12:45:31.954 INFO 18608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/swagger/post],methods=[POST]}" onto public java.lang.String com.sd.controller.SwaggerController.postSwaggwer()
+2018-05-03 12:45:31.954 INFO 18608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/swagger/str],methods=[GET],produces=[*/*]}" onto public java.lang.String com.sd.controller.SwaggerController.singleMethod()
+2018-05-03 12:45:31.955 INFO 18608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-05-03 12:45:31.956 INFO 18608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-05-03 12:45:31.956 INFO 18608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-05-03 12:45:31.956 INFO 18608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-05-03 12:45:31.958 INFO 18608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-03 12:45:31.958 INFO 18608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-03 12:45:31.990 INFO 18608 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-03 12:45:32.020 INFO 18608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@19d4642c: startup date [Thu May 03 12:45:30 IST 2018]; root of context hierarchy
+2018-05-03 12:45:32.030 INFO 18608 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-03 12:45:32.030 INFO 18608 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-03 12:45:32.056 INFO 18608 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-05-03 12:45:32.114 INFO 18608 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 271a9a4b-360a-4cf7-810f-c1091130e197
+
+2018-05-03 12:45:32.123 INFO 18608 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35980062, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b1d324a, org.springframework.security.web.header.HeaderWriterFilter@79c58e41, org.springframework.security.web.csrf.CsrfFilter@59d27723, org.springframework.security.web.authentication.logout.LogoutFilter@1998d1aa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7877e56, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5bd527f8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2dd4c703, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@eda5310, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b38730c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@261be9bc, org.springframework.security.web.session.SessionManagementFilter@61bc2a31, org.springframework.security.web.access.ExceptionTranslationFilter@3a93fe3f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@706c6f92]
+2018-05-03 12:45:32.134 INFO 18608 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-05-03 12:45:32.150 INFO 18608 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-03 12:45:32.150 INFO 18608 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-03 12:45:32.153 INFO 18608 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-03 12:45:32.157 INFO 18608 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-05-03 12:45:32.158 INFO 18608 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-05-03 12:45:32.159 INFO 18608 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-05-03 12:45:32.178 INFO 18608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2018-05-03 12:45:32.179 INFO 18608 --- [restartedMain] com.sd.config.AppConfig                  : Started AppConfig in 1.595 seconds (JVM running for 402.674)
+2018-05-03 12:45:32.182 INFO 18608 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-05-03 12:45:37.243 INFO 18608 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-03 12:45:37.244 INFO 18608 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-03 12:45:37.248 INFO 18608 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms

@@ -106,5 +106,8 @@
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
+	<build>
+		<finalName>sdapp</finalName>
+	</build>
 
 </project>

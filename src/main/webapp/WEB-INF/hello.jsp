@@ -8,5 +8,6 @@
 <title>Hello</title>
 </head>
 <body>${message}
+	<br>from JSP
 </body>
 </html>

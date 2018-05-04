@@ -16,9 +16,7 @@ import io.swagger.annotations.ApiOperation;
 @Api(value = "SwagController")
 public class SwaggerController {
 
-	protected final Logger log = (Logger) Logger.getInstance(SwaggerController.class);
-
-	private final Logger LOGGER = LogManager.getLogger(SwaggerController.class);
+	private static final Logger LOGGER = LogManager.getLogger(SwaggerController.class);
 
 	@ApiOperation(value = "Get Operation")
 	@RequestMapping(value = "api/swagger/hi", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)

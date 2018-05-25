@@ -29,6 +29,7 @@ public class SwaggerConfiguration {
 		return or(regex("/api/post.*"), regex("/api/swagger.*"));
 	}
 
+	@SuppressWarnings("deprecation")
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder().title("SD APP").description("SD App provides to easy implementaion ")
 				.termsOfServiceUrl("http://SwaggerUITest.com").contact("sreesailam.dasari@gmail.com")

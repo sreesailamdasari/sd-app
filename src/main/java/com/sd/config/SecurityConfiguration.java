@@ -18,10 +18,18 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	// Authentication : User --> Roles
-	@Override
+	//spring boot-2.0
+/*	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication().withUser("user").password("{noop}password").roles("USER").and().withUser("admin")
 				.password("{noop}password").roles("USER", "ADMIN");
+
+	}*/
+	//springboot 1.5.13
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth.inMemoryAuthentication().withUser("user").password("password").roles("USER").and().withUser("admin")
+				.password("password").roles("USER", "ADMIN");
 
 	}
 

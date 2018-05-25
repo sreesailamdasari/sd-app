@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Java Script Learning</title>
+<script>
+	function myFunction() {
+		document.getElementById('demo').innerHTML = 'Paragraph Changed';
+	}
+</script>
+</head>
+<body>
+	<p id="demo" style="font-size: 20px">A paragraph</p>
+	<button type="button" onclick="myFunction()">In Head</button>
+
+
+	<!-- Java Script in Body Section -->
+	<script>
+		function myFunction1() {
+			document.getElementById('demo1').innerHTML = 'Paragraph in BodyChanged';
+		}
+	</script>
+	<p id="demo1" style="font-size: 25px">A paragraph in Body section</p>
+	<button type="button" onclick="myFunction1()">In Body</button>
+
+	<!-- Java Script External file -->
+	<script src="../myJSFunction.js"></script>
+	<p id="demo2" style="font-size: 30px">Trying to Get from External
+		file</p>
+	<button type="button" onclick="myFunction2()">External File</button>
+
+	<br>
+	<br>
+	<br>
+	<!-- JavaScript display Possibilities  -->
+	
+	<!-- For testing purpose only we can use doucment.write() -->
+	document.write()->5+6 =
+	<script>
+		document.write(5 + 6)
+	</script>
+	<!-- Fully loaded it will delete the existing html -->
+	<!-- <button type="button" onclick="document.write(5 + 6)">Try it</button> -->
+
+	<script>
+	var a=5;b=6;
+		console.log('checking in console while debug a+b = '+(a+b))
+	</script>
+	<!-- alert box display format -->
+	<script>
+		window.alert('checking')
+	</script>
+</body>
+</html>

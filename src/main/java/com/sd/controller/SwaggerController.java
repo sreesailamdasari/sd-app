@@ -22,7 +22,8 @@ public class SwaggerController {
 	@RequestMapping(value = "api/swagger/hi", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Person hiSwagger() {
 		LOGGER.info("checking in the swagger contoller");
-		Person person = new Person(10);
+		Person person = new Person();
+		person.setId(10);
 		return person;
 	}
 

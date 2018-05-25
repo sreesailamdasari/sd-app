@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Java Script</title>
+</head>
+<body>
+	<button type="button"
+		onclick="document.getElementById('demo').innerHTML=Date()">Click
+		me to display Date and Time</button>
+	<p id="demo" />
+	<button type="button"
+		onclick="document.getElementById('change').innerHTML='Welcome to JavaScript'">Click
+		here to change</button>
+	<p id="change">Changes here</p>
+	
+	<h1>Java script can change the attribute values</h1>
+	<button type="button" onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the Light</button>
+	<img id="myImage" src="pic_bulboff.gif" style="width: 100px">
+	<button type="button" onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the Light</button>
+	
+	<h2>JS can change the style of HTML element</h2>
+	<button type="button" onclick="document.getElementById('changestyle').style.fontSize='40px'">Click to Change the font</button>
+	<p id="changestyle">Java script can change the HTML element style</p>
+	
+	<h3>Java script can show and hide the elements</h3>
+	<p id="show"> Hide</p>
+	<button type="button" onclick="document.getElementById('show').style.display='none'">Click to Hide HTML element</button><br><br><br>
+	
+	<button type="button" onclick="document.getElementById('hide').style.display='block'">Click to show hidden HTML element</button>
+	<p id="hide" style="display:none">JS can Show hidden HTML elements</p>
+	
+	
+</body>
+</html>

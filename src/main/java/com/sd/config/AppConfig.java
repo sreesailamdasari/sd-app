@@ -5,8 +5,6 @@ import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 //import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
 //import org.springframework.context.annotation.Configuration;
@@ -15,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 //or
 @SpringBootApplication
 @ComponentScan(basePackages = "com.sd")
-public class AppConfig extends SpringBootServletInitializer {
+public class AppConfig {//extends SpringBootServletInitializer {
 
 	private static final Logger LOGGER = LogManager.getLogger(AppConfig.class);
 
@@ -23,10 +21,10 @@ public class AppConfig extends SpringBootServletInitializer {
 	 * 
 	 * 
 	 */
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(AppConfig.class);
-	}
+//	@Override
+//	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+//		return builder.sources(AppConfig.class);
+//	}
 
 	public static void main(String[] args) {
 		LOGGER.info("Checking the log4j from main class file");

@@ -153,9 +153,10 @@ public class SFTPLoginWithPPKFile extends HttpServlet implements Runnable {
 		// Malesiya time zone
 		// ZoneId malesiyaZone = ZoneId.of("Asia/Kuala_Lumpur");
 		// India time zone
-		ZoneId indiaZone = ZoneId.of("Asia/Kolkata");
+//		ZoneId indiaZone = ZoneId.of("Asia/Kolkata");
+		ZoneId zoneId = ZoneId.systemDefault();
 
-		ZonedDateTime zonedNow = ZonedDateTime.of(localNow, indiaZone);
+		ZonedDateTime zonedNow = ZonedDateTime.of(localNow, zoneId);
 		ZonedDateTime zonedNext;
 		// Here you need to set the time when it has to start - suppose if you want run
 		// the scheduler midnight 1.30 am you need to mention time as - 13-30-0

@@ -6,14 +6,20 @@ package com.sd.util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -22,6 +28,8 @@ import java.util.concurrent.TimeUnit;
 import javax.servlet.http.HttpServlet;
 
 import org.apache.log4j.Logger;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelSftp;
@@ -55,7 +63,37 @@ public class SFTPLoginWithPPKFile extends HttpServlet implements Runnable {
 
 	public void run() {
 		LOGGER.info("run() in Appconfig ");
-		File file = new File("text.txt");
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+		OrderTransDao orderTransDao = appContext.getBean("orderTransDao", OrderTransDao.class);
+		List<OrderTransaction> orderTransactions = orderTransDao.getOrderTransactionDeatils();
+		LOGGER.info("Total Records : " + orderTransactions.size());
+		// LOGGER.info(orderTransactions.toString());
+		FileWriter fileWriter = null;
+		File file = null;
+		FileOutputStream fileOutputStream = null;
+		String fileName = "Celcom_Lifecycles";
+		DateFormat dateFormat = new SimpleDateFormat("ddMMYYYYHHmmss");
+		Date date = new Date();
+		String currentDate = dateFormat.format(date);
+		try {
+//			file = new File("D://Celcom//Lifecycle//CSV//"+fileName + "_" + currentDate + ".csv");
+			file = new File("../" + fileName + "_" + currentDate + ".csv");
+			fileOutputStream = new FileOutputStream(file);
+			LOGGER.info("File name : " + file.getAbsoluteFile().getName());
+			fileWriter = new FileWriter(file);
+			FileWriterUtil fileWriterUtil = new FileWriterUtil();
+			fileWriterUtil.appendColumns(fileWriter);
+			for (OrderTransaction orderTrans : orderTransactions) {
+				String customerMobileNumber = orderTrans.getMsisdn();
+				String transDate = orderTrans.getTransDate();
+				fileWriterUtil.appendValues(customerMobileNumber, transDate, fileWriter);
+			}
+			fileWriter.flush();
+			fileOutputStream.close();
+			fileWriter.close();
+		} catch (IOException e) {
+			LOGGER.error(e.getClass().getName() + " : " + e.getMessage());
+		}
 		transferFileToSFTPFolder(file);
 		LOGGER.info("Again File will be generated in seconds : " + initalDelay());
 	}

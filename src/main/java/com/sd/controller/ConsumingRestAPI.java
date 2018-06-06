@@ -3,6 +3,9 @@
  */
 package com.sd.controller;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.sd.model.Employee;
 import com.sd.model.Request;
 
@@ -43,7 +48,9 @@ public class ConsumingRestAPI {
 	@ApiOperation(value = "GET test")
 	@RequestMapping(value = "/api/gettest", method = RequestMethod.GET)
 	public String getMethodTesting() {
-		String url = serviceURL + "/hi/hello";
+		// String url = serviceURL + "/hi/hello";
+		String url = "https://test.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9jfQT7vUue.H_vhe7zFZ0MkhiZJ53Ge3NElJLtf_gQtbHo1TWG8HV7TbEgWMbI7Yjo0WXFXG3z9Pj6eNV&client_secret=3758146947220243473&username=integration.api@capgemini.com.clientelng&password=Clientelling@123";
+
 		return restTemplate.getForObject(url, String.class);
 	}
 
@@ -54,9 +61,32 @@ public class ConsumingRestAPI {
 	 */
 	@ApiOperation(value = "Post test")
 	@RequestMapping(value = "/api/posttest", method = RequestMethod.GET)
-	public Employee postMethodTesting(@RequestBody Request request) {
-		ResponseEntity<String> response = restTemplate.postForEntity(serviceURL, request, String.class);
+	public Employee postMethodTesting(/* @RequestBody Request request */) {
+		String url = "https://test.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9jfQT7vUue.H_vhe7zFZ0MkhiZJ53Ge3NElJLtf_gQtbHo1TWG8HV7TbEgWMbI7Yjo0WXFXG3z9Pj6eNV&client_secret=3758146947220243473&username=integration.api@capgemini.com.clientelng&password=Clientelling@123";
+		ResponseEntity<String> response = restTemplate.postForEntity(url, null, String.class);
 		// return response.getBody();
+		System.out.println(response.getBody());
+
+		String jsonString = response.toString();
+
+		JSONArray data;
+		String[] token = null;
+		try {
+			JSONObject jsonResult = new JSONObject(jsonString);
+			data = jsonResult.getJSONArray("data");
+			if (data != null) {
+				token = new String[data.length()];
+				for (int i = 0; i < data.length(); i++) {
+					token[i] = (String) data.get(0);
+				}
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println(token);
+		// token[i]= data.getString("access_token");
+
 		return null;
 	}
 

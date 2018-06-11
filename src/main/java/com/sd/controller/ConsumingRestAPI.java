@@ -48,8 +48,7 @@ public class ConsumingRestAPI {
 	@ApiOperation(value = "GET test")
 	@RequestMapping(value = "/api/gettest", method = RequestMethod.GET)
 	public String getMethodTesting() {
-		// String url = serviceURL + "/hi/hello";
-		String url = "https://test.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9jfQT7vUue.H_vhe7zFZ0MkhiZJ53Ge3NElJLtf_gQtbHo1TWG8HV7TbEgWMbI7Yjo0WXFXG3z9Pj6eNV&client_secret=3758146947220243473&username=integration.api@capgemini.com.clientelng&password=Clientelling@123";
+		 String url = serviceURL + "/hi/hello";
 
 		return restTemplate.getForObject(url, String.class);
 	}
@@ -62,7 +61,7 @@ public class ConsumingRestAPI {
 	@ApiOperation(value = "Post test")
 	@RequestMapping(value = "/api/posttest", method = RequestMethod.GET)
 	public Employee postMethodTesting(/* @RequestBody Request request */) {
-		String url = "https://test.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9jfQT7vUue.H_vhe7zFZ0MkhiZJ53Ge3NElJLtf_gQtbHo1TWG8HV7TbEgWMbI7Yjo0WXFXG3z9Pj6eNV&client_secret=3758146947220243473&username=integration.api@capgemini.com.clientelng&password=Clientelling@123";
+		 String url = serviceURL + "/hi/hello";
 		ResponseEntity<String> response = restTemplate.postForEntity(url, null, String.class);
 		// return response.getBody();
 		System.out.println(response.getBody());
